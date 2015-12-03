@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>R Package Downloads Ranking </title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>R Package Downloads Ranking (Demo)</h1>
+        <p>This is a website sharing the information about R package downloads.</p>
+        <p>You can find the rankings of R packages and other relevant information on this site.</p>
+
+
+        <ul>
+          <li><a href="#ranking"><strong>Rankings</strong></a></li>
+          <li><a href="#api"><strong>API Service</strong></a></li>
+          <li><a href="#about"><strong>About</strong></a></li>
+        </ul>
+
+      </header>
+      <section>
+
+
+<h1>
+<a id="ranking" class="anchor" href="#ranking" aria-hidden="true"><span class="octicon octicon-link"></span></a>Rankings</h1>
+
+
+  <div id="package_ranking" style="height:300px;width:450px; border:5px solid #ccc;padding:10px;"></div>
+    <script src="echarts-all.js"></script>
+    <script src="data_js/package_ranking.js"> </script>
+<p>   
+
+
+</p>
+  <div id="hottest_countries" style="height:300px;width:450px; border:5px solid #ccc;padding:10px;"></div>
+    <script src="echarts-all.js"></script>    
+    <script src="data_js/hottest_countries.js"> </script>
+<p>
+
+</p>
+<p>
+Full Ranking: <a href="/data/2015_Nov_full_package_ranking.csv">Package Ranking</a>, <a href="/data/2015_Nov_full_country_ranking.csv">Country Ranking</a>
+</p>
+
+<p>
+Historical Rankings: <a href="/data/2015_Oct_rankings.zip">October 2015</a>
+</p>
+
+
+
+
+
+
+
+
+<p>   
+
+</p>
+
+<h1>
+<a id="api" class="anchor" href="#api" aria-hidden="true"><span class="octicon octicon-link"></span></a>API Service</h1>
+
+
+To check the ranking of a specific package, please use the API as below
+
+<pre><code>http://54.169.123.101:8000/downloads?package=package-name
+</code></pre>
+
+For example, to check the ranking of package "Rcpp", we can enter the link below into any browser.
+<pre><code><a href="http://54.169.123.101:8000/downloads?package=Rcpp">http://54.169.123.101:8000/downloads?package=Rcpp</a>
+</code></pre>
+
+
+<h1>
+<a id="about" class="anchor" href="#about" aria-hidden="true"><span class="octicon octicon-link"></span></a>About</h1>
+
+<p>This website is developed to help R community access the information of R package downloads and the 'ranking' of packages.</p>
+<p>To report bugs or provide suggestions, please feel free to drop a mail to Xiaodong at <a href="mailto:xd.deng.r@gmail.com">xd.deng.r@gmail.com</a></p>
+
+
+      </section>
+      <footer>
+        <p>This service is maintained by</p>
+        <p><a href="http://me.seekingqed.com">Xiaodong DENG</a></p>
+        <p>and sponsored by</p>
+        <p>XXXXXX</p>
+        <p><small>Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+
+
+
+
+</html>
