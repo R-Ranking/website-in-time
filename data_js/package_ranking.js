@@ -2,8 +2,9 @@
         var myChart = echarts.init(document.getElementById('package_ranking'));
         myChart.setOption({
   title : {
-        text: 'R Package Ranking in November 2015',
-        subtext: 'Data from cran-logs.rstudio.com'
+        text: 'R Package Ranking in April 2016',
+        subtext: 'Data from cran-logs.rstudio.com',
+	sublink: 'http://cran-logs.rstudio.com'
     },
     tooltip : {
         trigger: 'axis'
@@ -11,7 +12,8 @@
     toolbox: {
         show : true,
         feature : {
-            restore : {show: true},
+            dataView : {show: true, readOnly: true},
+	    restore : {show: true},
             saveAsImage : {show: true}
         }
     },
@@ -26,7 +28,7 @@
         {
             type : 'category',
 
-            data : ['ggplot2','stringi','fma','expsmooth','fpp','tseries','Rcpp','forecast','lmtest','zoo']
+            data : ['gtable','magrittr','scales','stringi','plyr','stringr','digest','ggplot2','Rcpp','RcppArmadillo']
         
         }
     ],
@@ -35,7 +37,7 @@
         {
             name:'Download Counts',
             type:'bar',
-            data:[198381, 209872, 230694, 231106, 231751, 238429, 249810, 250109, 253533, 304570]
+            data:[150171, 159638, 167722, 170182, 170953, 171733, 179117, 219765, 254575, 353992]
         }
     ]
              

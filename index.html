@@ -3,54 +3,87 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>R Package Downloads Ranking </title>
+    <title>R Package Downloads Ranking</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
+    <link rel="shortcut icon" href="/images/r-ranking.ico" />
   </head>
-  <body>
+  
+<body>
     <div class="wrapper">
       <header>
-        <h1>R Package Downloads Ranking (Demo)</h1>
-        <p>This is a website sharing the information about R package downloads.</p>
-        <p>You can find the rankings of R packages and other relevant information on this site.</p>
-
-
+	<h1><a href="http://r-ranking.com/">R-Ranking</a></h1>
+        <h3>R Package Downloads Ranking</h3>
+        <p>Sharing the information about R package ranking and downloads statistics.</p>
+<p><u>
+(Updated for <b>April 2016</b>.)
+</u>
+</p>
         <ul>
           <li><a href="#ranking"><strong>Rankings</strong></a></li>
           <li><a href="#api"><strong>API Service</strong></a></li>
           <li><a href="#about"><strong>About</strong></a></li>
         </ul>
 
+<div id='form' style="height:50px;width:250px; border:2px solid #ccc; padding:10px">
+	
+<form name="myform" action="http://r-ranking.com:7000/search_action.php" method="post">
+Package Performance:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
+<input type='text' name='package' id='package'/>
+&nbsp &nbsp <a href="javascript: submitform()"><b>Select</b></a>
+</form>
+
+<script type="text/javascript">
+function submitform()
+{
+  var a="http://r-ranking.com/packages/";
+  var url=a + document.getElementById('package').value +".html";
+  window.location = url;
+}
+</script>
+</div>
+
       </header>
       <section>
+
+<script src="echarts-all.js"></script>
+
+ <div id="hot_cloud" style="height:210px;width:400px;padding:10px;"></div>
+  <script src="data_js/hot_cloud.js"></script>
 
 
 <h1>
 <a id="ranking" class="anchor" href="#ranking" aria-hidden="true"><span class="octicon octicon-link"></span></a>Rankings</h1>
 
 
-  <div id="package_ranking" style="height:300px;width:450px; border:5px solid #ccc;padding:10px;"></div>
-    <script src="echarts-all.js"></script>
+  <div id="package_ranking" style="height:300px;width:520px; border:5px solid #ccc;padding:10px;"></div>
     <script src="data_js/package_ranking.js"> </script>
+
 <p>   
 
-
 </p>
-  <div id="hottest_countries" style="height:300px;width:450px; border:5px solid #ccc;padding:10px;"></div>
-    <script src="echarts-all.js"></script>    
+  <div id="hottest_countries" style="height:300px;width:520px; border:5px solid #ccc;padding:10px;"></div>    
     <script src="data_js/hottest_countries.js"> </script>
 <p>
 
 </p>
-<p>
-Full Ranking: <a href="/data/2015_Nov_full_package_ranking.csv">Package Ranking</a>, <a href="/data/2015_Nov_full_country_ranking.csv">Country Ranking</a>
+
+<p align="right">
+<a href="view_on_map.html">View On Map</a>
+</p>
+
 </p>
 
 <p>
-Historical Rankings: <a href="/data/2015_Oct_rankings.zip">October 2015</a>
+Full Ranking: <a href="/data/Package_ranking_2016_April.csv">Package Ranking</a>, <a href="/data/Country_ranking_2016_April.csv">Country Ranking</a>
+</p>
+
+<p>
+Historical Rankings:
+<small>
+<a href="data/2016_March_rankings.zip">March 2016</a>, <a href="data/2016_Feb_rankings.zip">Feburuary 2016</a>, <a href="data/2016_Jan_rankings.zip">January 2016</a>, <a href="data/2015_Dec_rankings.zip">December 2015</a>, <a href="data/2015_November.zip">November 2015</a>, <a href="/data/2015_Oct_rankings.zip">October 2015</a>, <a href="/data/2015_Sept_rankings.zip">September 2015</a>, <a href="/data/2015_Aug_rankings.zip">August 2015</a>, <a href="data/2015_Jul_rankings.zip">July 2015</a>, <a href="data/2015_Jun_rankings.zip">June 2015</a>, <a href="data/rankings_2015_05.zip">May 2015</a>, <a href="data/rankings_2015_04.zip">April 2015</a>, <a href="data/rankings_2015_03.zip">March 2015</a>, <a href="data/rankings_2015_02.zip">February 2015</a>, <a href="data/rankings_2015_01.zip">January 2015</a>
+</small>
 </p>
 
 
@@ -70,11 +103,11 @@ Historical Rankings: <a href="/data/2015_Oct_rankings.zip">October 2015</a>
 
 To check the ranking of a specific package, please use the API as below
 
-<pre><code>http://54.169.123.101:8000/downloads?package=package-name
+<pre><code>http://R-Ranking.com:8000/downloads?package=package-name
 </code></pre>
 
 For example, to check the ranking of package "Rcpp", we can enter the link below into any browser.
-<pre><code><a href="http://54.169.123.101:8000/downloads?package=Rcpp">http://54.169.123.101:8000/downloads?package=Rcpp</a>
+<pre><code><a href="http://R-Ranking.com:8000/downloads?package=Rcpp">http://R-Ranking.com:8000/downloads?package=Rcpp</a>
 </code></pre>
 
 
@@ -87,18 +120,24 @@ For example, to check the ranking of package "Rcpp", we can enter the link below
 
       </section>
       <footer>
-        <p>This service is maintained by</p>
-        <p><a href="http://me.seekingqed.com">Xiaodong DENG</a></p>
-        <p>and sponsored by</p>
-        <p>XXXXXX</p>
-        <p><small>Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+        <p>Developed by <a href="https://github.com/XD-DENG">Xiaodong DENG</a>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp with <b>R</b>, <b>Apache Spark</b>, and <b>JavaScript</b></p>
+       <!-- <p>& sponsored by <a href="http://www.r-project.org">XXXXXX</a></p> -->
+	<p><small>Theme modified from <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
     
-  </body>
+</body>
 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+  ga('create', 'UA-63780621-2', 'auto');
+  ga('send', 'pageview');
 
+</script>
 
 </html>

@@ -1,10 +1,10 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
+
 
 body {
   padding:50px;
-  font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color:#777;
-  font-weight:300;
+  font:15px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color:#222;
+  font-weight:400;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -96,14 +96,14 @@ img {
 }
 
 header {
-  width:270px;
+  width:280px;
   float:left;
   position:fixed;
 }
 
 header ul {
   list-style:none;
-  height:40px;
+  height:25px;
 
   padding:0;
 
@@ -125,7 +125,7 @@ header li {
   width:89px;
   float:left;
   border-right:1px solid #d2d2d2;
-  height:40px;
+  height:25px;
 }
 
 header ul a {
