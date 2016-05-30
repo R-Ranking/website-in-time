@@ -27,21 +27,22 @@
         </ul>
 
 <div id='form' style="height:50px;width:250px; border:2px solid #ccc; padding:10px">
-	
-<form name="myform" action="http://r-ranking.com:7000/search_action.php" method="post">
-Package Performance:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
-<input type='text' name='package' id='package'/>
-&nbsp &nbsp <a href="javascript: submitform()"><b>Select</b></a>
-</form>
+
+Package Performance:
+<input id="package"></input>
 
 <script type="text/javascript">
-function submitform()
-{
-  var a="http://r-ranking.com/packages/";
-  var url=a + document.getElementById('package').value +".html";
-  window.location = url;
+function forward_to_package_link(){
+  if (document.getElementById("package").value === ''){
+    window.alert("Package name entered is invalid")
+    return null
+  }
+  window.location = "http://R-Ranking.com/packages/" + 
+                          document.getElementById("package").value
+                          +".html";
 }
 </script>
+<button type="button" onclick="forward_to_package_link()"><a><b>Select</b></a></button>
 </div>
 
       </header>
