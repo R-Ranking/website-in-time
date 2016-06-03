@@ -2,7 +2,7 @@
         var myChart = echarts.init(document.getElementById('hottest_countries'));
         myChart.setOption({
   title : {
-        text: 'Country Ranking in April 2016',
+        text: 'Country Ranking in May 2016',
         subtext: 'Data from cran-logs.rstudio.com',
 	sublink: 'http://cran-logs.rstudio.com'
     },
@@ -27,7 +27,7 @@
     yAxis : [
         {
             type : 'category',
-            data : ['ES','HK','JP','KR','FR','CN','IN','GB','DE','US']
+            data : ['ES','JP','AU','KR','FR','CN','IN','GB','DE','US']
         }
     ],
     series : [
@@ -35,7 +35,7 @@
         {
             name:'Download Counts',
             type:'bar',
-            data:[347542, 372691, 410419, 432837, 472642, 570994, 604724, 655465, 997108, 5720329]
+            data:[495919, 499647, 499886, 506395, 556978, 693758, 712692, 842241, 1703396, 5995739]
         }
     ]
              

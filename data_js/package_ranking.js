@@ -2,7 +2,7 @@
         var myChart = echarts.init(document.getElementById('package_ranking'));
         myChart.setOption({
   title : {
-        text: 'R Package Ranking in April 2016',
+        text: 'R Package Ranking in May 2016',
         subtext: 'Data from cran-logs.rstudio.com',
 	sublink: 'http://cran-logs.rstudio.com'
     },
@@ -28,7 +28,7 @@
         {
             type : 'category',
 
-            data : ['gtable','magrittr','scales','stringi','plyr','stringr','digest','ggplot2','Rcpp','RcppArmadillo']
+            data : ['magrittr','plyr','stringr','digest','stringi','mixOmics','ggplot2','rgl','Rcpp','RcppArmadillo']
         
         }
     ],
@@ -37,7 +37,7 @@
         {
             name:'Download Counts',
             type:'bar',
-            data:[150171, 159638, 167722, 170182, 170953, 171733, 179117, 219765, 254575, 353992]
+            data:[202032, 208944, 214283, 215845, 220655, 224417, 249214, 273676, 295643, 411464]
         }
     ]
              
