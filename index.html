@@ -14,65 +14,20 @@
     <div class="wrapper">
       <header>
 	<h1><a href="http://r-ranking.com/">R-Ranking</a></h1>
-        <h3>R Package Downloads Ranking</h3>
-        <p>Sharing the information about R package ranking and downloads statistics.</p>
+        
+        <p>We're sorry but the R-Ranking service would be shutted down and we have no plan to restart it within short future. Sincere apologize for the inconvenience caused.</p>
+
+		<p>Instead of <b>R-Ranking</b> service, we would like to introduce a few other similar services instead.</p>
+
+		<p><a href="http://www.rdocumentation.org/">[1] RDocumentation</a></p>
+		<p><a href="http://www.r-pkg.org/">[2] METACRAN</a></p>
+
+</p>
+<<<<<<< HEAD
 <p><u>
 (Updated for <b>May 2016</b>.)
 </u>
-</p>
-        <ul>
-          <li><a href="#ranking"><strong>Rankings</strong></a></li>
-          <li><a href="#api"><strong>API Service</strong></a></li>
-          <li><a href="#about"><strong>About</strong></a></li>
-        </ul>
-
-<div id='form' style="height:50px;width:250px; border:2px solid #ccc; padding:10px">
-
-Package Performance:
-<input id="package"></input>
-
-<script type="text/javascript">
-function forward_to_package_link(){
-  if (document.getElementById("package").value === ''){
-    window.alert("Package name entered is invalid")
-    return null
-  }
-  window.location = "http://R-Ranking.com/packages/" + 
-                          document.getElementById("package").value
-                          +".html";
-}
-</script>
-<button type="button" onclick="forward_to_package_link()"><a><b>Select</b></a></button>
-</div>
-
-      </header>
-      <section>
-
-<script src="echarts-all.js"></script>
-
- <div id="hot_cloud" style="height:210px;width:400px;padding:10px;"></div>
-  <script src="data_js/hot_cloud.js"></script>
-
-
-<h1>
-<a id="ranking" class="anchor" href="#ranking" aria-hidden="true"><span class="octicon octicon-link"></span></a>Rankings</h1>
-
-
-  <div id="package_ranking" style="height:300px;width:520px; border:5px solid #ccc;padding:10px;"></div>
-    <script src="data_js/package_ranking.js"> </script>
-
-<p>   
-
-</p>
-  <div id="hottest_countries" style="height:300px;width:520px; border:5px solid #ccc;padding:10px;"></div>    
-    <script src="data_js/hottest_countries.js"> </script>
-<p>
-
-</p>
-
-<p align="right">
-<a href="view_on_map.html">View On Map</a>
-</p>
+=======
 
 </p>
 
@@ -96,33 +51,15 @@ Historical Rankings:
 
 <p>   
 
+>>>>>>> origin/master
 </p>
 
-<h1>
-<a id="api" class="anchor" href="#api" aria-hidden="true"><span class="octicon octicon-link"></span></a>API Service</h1>
 
 
-To check the ranking of a specific package, please use the API as below
+      </header>
 
-<pre><code>http://R-Ranking.com:8000/downloads?package=package-name
-</code></pre>
-
-For example, to check the ranking of package "Rcpp", we can enter the link below into any browser.
-<pre><code><a href="http://R-Ranking.com:8000/downloads?package=Rcpp">http://R-Ranking.com:8000/downloads?package=Rcpp</a>
-</code></pre>
-
-
-<h1>
-<a id="about" class="anchor" href="#about" aria-hidden="true"><span class="octicon octicon-link"></span></a>About</h1>
-
-<p>This website is developed to help R community access the information of R package downloads and the 'ranking' of packages.</p>
-<p>To report bugs or provide suggestions, please feel free to drop a mail to Xiaodong at <a href="mailto:xd.deng.r@gmail.com">xd.deng.r@gmail.com</a></p>
-
-
-      </section>
       <footer>
         <p>Developed by <a href="https://github.com/XD-DENG">Xiaodong DENG</a>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp with <b>R</b>, <b>Apache Spark</b>, and <b>JavaScript</b></p>
-       <!-- <p>& sponsored by <a href="http://www.r-project.org">XXXXXX</a></p> -->
 	<p><small>Theme modified from <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
@@ -130,15 +67,5 @@ For example, to check the ranking of package "Rcpp", we can enter the link below
     
 </body>
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-63780621-2', 'auto');
-  ga('send', 'pageview');
-
-</script>
 
 </html>
